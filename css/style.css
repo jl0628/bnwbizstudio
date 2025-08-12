@@ -25,7 +25,9 @@ header, footer {
 
 /* Logo sizing (override inline heights removed) */
 .header-container img {
-    height: 48px;
+    height: 36px;
+    max-height: 36px;
+    width: auto;
 }
 
 /* Hamburger Menu */
@@ -345,7 +347,8 @@ footer {
         padding: 0.6rem;
     }
     .header-container img {
-        height: 34px;
+        height: 28px;
+        max-height: 28px;
     }
     
     .hero {
