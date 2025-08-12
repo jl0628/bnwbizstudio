@@ -114,6 +114,10 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     padding: 2rem 1rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 18px;
 }
 
 .hero h1 {
@@ -365,6 +369,9 @@ footer {
     .hero {
         min-height: 45vh;
         padding: 0.5rem 1rem 1.5rem 1rem;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
     }
     
     .hero h1 {
