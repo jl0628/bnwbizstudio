@@ -10,23 +10,31 @@
     <header>
         <div class="header-container">
             <img src="images/logo.jpeg" alt="B&W Biz Studio Logo" style="height:48px;">
-            <nav>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav-menu" id="nav-menu">
                 <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
+                <a href="services.html" class="active">Services</a>
                 <a href="portfolio.html">Portfolio</a>
                 <a href="about.html">About Us</a>
                 <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
+
     <main>
-        <section class="container">
+        <div class="container">
             <h1>Our Services</h1>
+            <p>Comprehensive business solutions to help your company grow and succeed.</p>
+            
             <div class="services-grid">
                 <div class="service-card">
-                    <img src="images/license.jpg" alt="License Application">
+                    <img src="images/licensing.png" alt="License Application">
                     <h2>License Application</h2>
-                    <p>Simplifying complex processes to ensure legal compliance and smooth operations (Business License, Signboard License, Entertainment License, Liquid License, Jabatan Bomba Permit &amp; Etc)</p>
+                    <p>Simplifying complex processes to ensure legal compliance and smooth operations (Business License, Signboard License, Entertainment License, Liquid License, Jabatan Bomba Permit & Etc)</p>
                 </div>
                 <div class="service-card">
                     <img src="images/company registration.jpeg" alt="Company Registration">
@@ -35,24 +43,44 @@
                 </div>
                 <div class="service-card">
                     <img src="images/printing.jpg" alt="Advertising Design & Printing">
-                    <h2>Advertising Design &amp; Printing</h2>
-                    <p>Crafting a professional brand image to enhance market visibility (Name card, Flyers, Banner/Bunting, Stand Accessories &amp; etc)</p>
+                    <h2>Advertising Design & Printing</h2>
+                    <p>Crafting a professional brand image to enhance market visibility (Name card, Flyers, Banner/Bunting, Stand Accessories & etc)</p>
                 </div>
                 <div class="service-card">
                     <img src="images/signboard.jpg" alt="Signboard Production & Installation">
-                    <h2>Signboard Production &amp; Installation</h2>
-                    <p>Delivering high-quality business signage for better brand recognition (Signboard, Lightbox, Backdrop, 3D Lettering, Billboard &amp; etc)</p>
+                    <h2>Signboard Production & Installation</h2>
+                    <p>Delivering high-quality business signage for better brand recognition (Signboard, Lightbox, Backdrop, 3D Lettering, Billboard & etc)</p>
                 </div>
                 <div class="service-card">
                     <img src="images/website.jpg" alt="Website Design & Development">
-                    <h2>Website Design &amp; Development</h2>
-                    <p>Creating innovative online platforms tailored to modern business needs (Landing Page, Apps, Platform &amp; etc)</p>
+                    <h2>Website Design & Development</h2>
+                    <p>Creating innovative online platforms tailored to modern business needs (Landing Page, Apps, Platform & etc)</p>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
+
     <footer>
         &copy; 2024 B&W Biz Studio. All rights reserved.
     </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        const hamburger = document.getElementById('hamburger-menu');
+        const navMenu = document.getElementById('nav-menu');
+        
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html> 
