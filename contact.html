@@ -12,7 +12,12 @@
     <header>
         <div class="header-container">
             <img src="images/logo.jpeg" alt="B&W Biz Studio Logo" style="height:48px;" />
-            <nav>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav-menu" id="nav-menu">
                 <a href="index.html">Home</a>
                 <a href="services.html">Services</a>
                 <a href="portfolio.html">Portfolio</a>
@@ -60,6 +65,25 @@
     <footer>
         &copy; 2024 B&W Biz Studio. All rights reserved.
     </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        const hamburger = document.getElementById('hamburger-menu');
+        const navMenu = document.getElementById('nav-menu');
+        
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
