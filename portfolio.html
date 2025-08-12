@@ -10,23 +10,55 @@
     <header>
         <div class="header-container">
             <img src="images/logo.jpeg" alt="B&W Biz Studio Logo" style="height:48px;">
-            <nav>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav-menu" id="nav-menu">
                 <a href="index.html">Home</a>
                 <a href="services.html">Services</a>
-                <a href="portfolio.html">Portfolio</a>
+                <a href="portfolio.html" class="active">Portfolio</a>
                 <a href="about.html">About Us</a>
                 <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
+
     <main>
-        <section class="container">
+        <div class="container">
             <h1>Our Portfolio</h1>
-            <p>Showcasing our best work. Portfolio items coming soon!</p>
-        </section>
+            <p>Discover our latest projects and successful business solutions.</p>
+            
+            <div class="portfolio-section">
+                <p>Our portfolio showcases the diverse range of services we've provided to businesses across various industries. From company registrations to complete branding solutions, we've helped numerous companies establish and grow their presence in the market.</p>
+                
+                <p>Stay tuned for updates as we continue to add more of our successful projects and client testimonials!</p>
+            </div>
+        </div>
     </main>
+
     <footer>
         &copy; 2024 B&W Biz Studio. All rights reserved.
     </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        const hamburger = document.getElementById('hamburger-menu');
+        const navMenu = document.getElementById('nav-menu');
+        
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html> 
