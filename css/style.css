@@ -8,6 +8,16 @@ body {
     color: #222;
 }
 
+/* Ensure padding/border are included in element width to avoid mobile overflow */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Prevent accidental horizontal scroll on small devices */
+html, body {
+    overflow-x: hidden;
+}
+
 header, footer {
     background: #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.03);
@@ -171,6 +181,7 @@ footer {
     gap: 1.2rem;
     width: 100%;
     max-width: 1000px;
+    box-sizing: border-box;
     box-shadow: 0 2px 16px rgba(0,120,215,0.06);
     border: 1.5px solid #e3e9f6;
 }
