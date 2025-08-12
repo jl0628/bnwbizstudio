@@ -23,6 +23,11 @@ header, footer {
     position: relative;
 }
 
+/* Logo sizing (override inline heights removed) */
+.header-container img {
+    height: 48px;
+}
+
 /* Hamburger Menu */
 .hamburger-menu {
     display: none;
@@ -340,12 +345,15 @@ footer {
     }
     
     .header-container {
-        padding: 1rem;
+        padding: 0.6rem;
+    }
+    .header-container img {
+        height: 34px;
     }
     
     .hero {
-        min-height: 50vh;
-        padding: 1rem;
+        min-height: 45vh;
+        padding: 0.5rem 1rem 1.5rem 1rem;
     }
     
     .hero h1 {
