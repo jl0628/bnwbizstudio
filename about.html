@@ -10,32 +10,59 @@
     <header>
         <div class="header-container">
             <img src="images/logo.jpeg" alt="B&W Biz Studio Logo" style="height:48px;">
-            <nav>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav-menu" id="nav-menu">
                 <a href="index.html">Home</a>
                 <a href="services.html">Services</a>
                 <a href="portfolio.html">Portfolio</a>
-                <a href="about.html">About Us</a>
+                <a href="about.html" class="active">About Us</a>
                 <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
-    <main>
-        <section class="container">
-            <h1>About Us</h1>
-            <p>B&W Biz Studio is dedicated to helping businesses succeed by providing expert services in licensing, registration, branding, and digital solutions. Our experienced team is passionate about simplifying business processes and delivering creative results.</p>
 
+    <main>
+        <div class="container">
+            <h1>About Us</h1>
             <div class="about-section">
-                <p>B&amp;W BIZ STUDIO is a professional one-stop business service provider dedicated to offering efficient and comprehensive solutions for enterprises. We specialize in assisting businesses with company registration and providing a full suite of services, from license applications to brand promotion, ensuring steady growth and success in the market.</p>
-                <p>With 10 years of industry experience, we understand the challenges businesses face at different growth stages. That’s why we provide customized, high-quality solutions with a professional and efficient approach, helping businesses overcome obstacles and achieve their goals. Our services primarily cover the Klang Valley, Malaysia, where we have successfully supported numerous companies, earning their trust and recognition. Moving forward, we aim to expand our services to reach a wider market and fulfill growing business needs.</p>
-                <p>Whether you’re a startup or an established company, B&amp;W BIZ STUDIO is your trusted partner, allowing you to focus on business expansion while we take care of your administrative and branding needs.</p>
-                <span class="about-tagline">B&amp;W BIZ STUDIO – Smoother operations, stronger brand identity!</span>
+                <p>B&W BIZ STUDIO is a professional one-stop business service provider dedicated to offering efficient and comprehensive solutions for enterprises. We specialize in assisting businesses with company registration and providing a full suite of services, from license applications to brand promotion, ensuring steady growth and success in the market.</p>
+                
+                <p>With 10 years of industry experience, we understand the challenges businesses face at different growth stages. That's why we provide customized, high-quality solutions with a professional and efficient approach, helping businesses overcome obstacles and achieve their goals.</p>
+                
+                <p>Our services primarily cover the Klang Valley, Malaysia, where we have successfully supported numerous companies, earning their trust and recognition. Moving forward, we aim to expand our services to reach a wider market and fulfill growing business needs.</p>
+                
+                <p>Whether you're a startup or an established company, B&W BIZ STUDIO is your trusted partner, allowing you to focus on business expansion while we take care of your administrative and branding needs.</p>
+                
+                <p class="about-tagline"><strong>B&W BIZ STUDIO – Smoother operations, stronger brand identity!</strong></p>
             </div>
-            <h2>Our Team</h2>
-            <p>Meet our professional and friendly team. (Team info coming soon!)</p>
-        </section>
+        </div>
     </main>
+
     <footer>
         &copy; 2024 B&W Biz Studio. All rights reserved.
     </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        const hamburger = document.getElementById('hamburger-menu');
+        const navMenu = document.getElementById('nav-menu');
+        
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html> 
