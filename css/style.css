@@ -289,6 +289,8 @@ footer {
 /* Contact Form Styles */
 .form-group {
     margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 500px;
 }
 
 .form-group label {
@@ -296,6 +298,7 @@ footer {
     margin-bottom: 0.5rem;
     font-weight: 500;
     color: #333;
+    text-align: left;
 }
 
 .form-group input,
@@ -306,6 +309,7 @@ footer {
     border-radius: 4px;
     font-size: 1rem;
     font-family: inherit;
+    box-sizing: border-box;
 }
 
 .form-group textarea {
@@ -327,6 +331,8 @@ footer {
     flex-direction: column !important;
     align-items: center !important;
     width: 100% !important;
+    max-width: 500px !important;
+    margin: 0 auto !important;
 }
 
 /* Button wrapper to center the button */
