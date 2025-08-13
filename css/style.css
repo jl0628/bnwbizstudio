@@ -324,6 +324,14 @@ footer {
     position: relative !important;
 }
 
+/* Ensure the form itself centers its content */
+.contact-form {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
 /* WhatsApp Float Button */
 .whatsapp-float {
     position: fixed;
