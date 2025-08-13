@@ -313,6 +313,14 @@ footer {
     min-height: 100px;
 }
 
+.contact-form .btn {
+    display: block;
+    margin: 0.5rem auto 0 auto;
+    width: fit-content;
+    min-width: 200px;
+    text-align: center;
+}
+
 /* WhatsApp Float Button */
 .whatsapp-float {
     position: fixed;
